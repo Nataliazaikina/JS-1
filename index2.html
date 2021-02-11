@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="chess"></div>
+	
+	<script>
+	var table = document.createElement("table");
+	table.style.border = "1px solid #000000";
+	table.style.borderSpacing = 0;
+	var chess = document.querySelector('.chess');
+	chess.insertAdjacentElement('afterbegin', table);	
+	var tr, td, i, j;
+	for(i = 0;i < 10;i++){
+		tr = document.createElement("tr");
+		table.append(tr);
+		for(j=0;j < 10;j++){
+			td = document.createElement("td");
+			//td.innerText = i * j;
+			tr.append(td);
+				td.style.width = "50px";
+				td.style.height = "50px";
+				td.style.border = "1px solid #000000";
+				td.style.background = "#884400";
+				td.style.textAlign = "center";	
+			if (i > 0 && j > 0 && i < 9 && j < 9) {
+				if (i % 2 != 0) {
+					if (j % 2 != 0) {
+						td.style.width = "50px";
+						td.style.height = "50px";
+						td.style.border = "1px solid #000000";
+						td.style.background = "#FFFFFF";
+						td.style.textAlign = "center";						
+					} else {
+						td.style.width = "50px";
+						td.style.height = "50px";
+						td.style.border = "1px solid #000000";
+						td.style.background = "#884400";
+						td.style.textAlign = "center";						
+					}
+
+				}	
+				if (i % 2 == 0) {
+					if (j % 2 == 0) {
+						td.style.width = "50px";
+						td.style.height = "50px";
+						td.style.border = "1px solid #000000";
+						td.style.background = "#FFFFFF";
+						td.style.textAlign = "center";						
+					} else {
+						
+					}
+
+				}
+			} 
+		}
+	}
+
+var item = document.querySelector("table");
+item.children[0].children[1].innerText = "A";
+item.children[0].children[2].innerText = "B";
+item.children[0].children[3].innerText = "C";
+item.children[0].children[4].innerText = "D";
+item.children[0].children[5].innerText = "E";
+item.children[0].children[6].innerText = "F";
+item.children[0].children[7].innerText = "G";
+item.children[0].children[8].innerText = "H";
+item.children[0].style.textAlign = "center";
+item.children[0].style.transform = "rotate(180deg)";  
+
+item.children[9].children[8].innerText = "A";
+item.children[9].children[7].innerText = "B";
+item.children[9].children[6].innerText = "C";
+item.children[9].children[5].innerText = "D";
+item.children[9].children[4].innerText = "E";
+item.children[9].children[3].innerText = "F";
+item.children[9].children[2].innerText = "G";
+item.children[9].children[1].innerText = "H"; 
+ 
+item.children[1].children[0].innerText = "1";   
+item.children[2].children[0].innerText = "2";  
+item.children[3].children[0].innerText = "3";  
+item.children[4].children[0].innerText = "4";  
+item.children[5].children[0].innerText = "5";  
+item.children[6].children[0].innerText = "6";  
+item.children[7].children[0].innerText = "7";  
+item.children[8].children[0].innerText = "8";  
+
+item.children[1].children[9].innerText = "1";   
+item.children[2].children[9].innerText = "2";  
+item.children[3].children[9].innerText = "3";  
+item.children[4].children[9].innerText = "4";  
+item.children[5].children[9].innerText = "5";  
+item.children[6].children[9].innerText = "6";  
+item.children[7].children[9].innerText = "7";  
+item.children[8].children[9].innerText = "8"; 
+
+for (i = 1; i < 9; i++) {
+	item.children[i].children[9].style.transform = "rotate(180deg)";
+}
+
+item.children[1].children[1].innerHTML = "&#9820;";
+item.children[1].children[8].innerHTML = "&#9820;";
+item.children[1].children[2].innerHTML = "&#9822;";
+item.children[1].children[7].innerHTML = "&#9822;";
+item.children[1].children[3].innerHTML = "&#9821;";
+item.children[1].children[6].innerHTML = "&#9821;";
+item.children[1].children[4].innerHTML = "&#9819;";
+item.children[1].children[5].innerHTML = "&#9818;";
+for (i = 1; i < 9; i++) {
+	item.children[1].children[i].style.fontSize = "40px";
+}
+for (i = 1; i < 9; i++) {
+	item.children[2].children[i].style.fontSize = "30px";
+	item.children[2].children[i].innerHTML = "&#9823;";
+}
+
+item.children[8].children[1].innerHTML = "&#9814;";
+item.children[8].children[8].innerHTML = "&#9814;";
+item.children[8].children[2].innerHTML = "&#9816;";
+item.children[8].children[7].innerHTML = "&#9816;";
+item.children[8].children[3].innerHTML = "&#9815;";
+item.children[8].children[6].innerHTML = "&#9815;";
+item.children[8].children[4].innerHTML = "&#9812;";
+item.children[8].children[5].innerHTML = "&#9813;";
+for (i = 1; i < 9; i++) {
+	item.children[8].children[i].style.fontSize = "40px";
+}
+for (i = 1; i < 9; i++) {
+	item.children[7].children[i].style.fontSize = "30px";
+	item.children[7].children[i].innerHTML = "&#9817;";
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
