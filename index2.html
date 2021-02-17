@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<h1 style="color: blue; font-size: 50px; text-align: center;">Корабли</h1>
+	<div style="width: 300px; height: 400px; margin: 100px 0 0 200px;">	
+		<img src="imgSmall/S0.jpg" alt="pic_s0" class="p0">
+		<img src="imgSmall/S1.jpg" alt="pic_s1" class="p1">
+		<img src="imgSmall/S2.jpg" alt="pic_s2" class="p2">
+	</div>
+	<div style="width: 700px; height: 500px; margin: 100px 0 0 200px;"></div>
+
+		
+
+
+	<script>
+		var mas = ["B0", "B1", "0"];
+		var img = document.querySelectorAll("img");
+		img[0].onclick = click;
+		img[1].onclick = click;
+		img[2].onclick = click;
+		var i = 4;
+		img[0].onerror = onerror;
+		img[1].onerror = onerror;
+		img[2].onerror = onerror;
+		
+		function click(e) {
+		
+			switch (e.target) {
+				case img[0]:
+					checkPicture(0);
+				break; 
+				case img[1]:
+					checkPicture(1);
+				break;
+				case img[2]:
+					checkPicture(2);
+				break; 
+			}
+		}
+
+		function checkPicture(i) {
+			img[i].src = "imgBig/" + mas[i] + ".jpg"; 
+
+			if (img[i]) {
+				return img[i];
+			} 
+		}
+
+		function onerror() {
+			alert("Файл не найден!");
+		}
+
+
+
+
+</script>
+
+</body>
+</html>

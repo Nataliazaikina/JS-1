@@ -3,10 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="script.js"></script>
 	<title>Document</title>
 </head>
 <body>
-	
+
+	<h1 style="color: red; font-size: 50px; text-align: center;">Магазин товаров</h1>
+	<div class="slider" style="width: 516px; height: 700px; margin: 0 auto;"></div>
+
+	<div style="margin: 0 auto; width: 500px; height: 90px; display: flex; justify-content: space-between;">
+		<button class="left" style="width: 220px; height: 90px; border: 1px solid red; background: #FF8888; font-size: 50px; padding: 0; margin: 0 auto;">&#8592;</button>
+		<button class="right" style="width: 220px; height: 90px; border: 1px solid red; background: #FF8888; font-size: 50px; padding: 0; margin: 0 auto;">&#8594;</button>
+	</div>
+
+	<script>
+		var mas = ["p0", "p1", "p2"];
+		var slider, img, src, i, m;
+		i = 0;
+		img = document.createElement("img");
+		slider = document.querySelector(".slider");
+		slider.append(img);		
+		img.src = mas[0] + ".png";
+
+		var buttons = document.querySelectorAll("button");
+			buttons[0].onclick = click;
+			buttons[1].onclick = click;
+
+		function click(e) {
+			switch (e.target) {
+				case buttons[1]: 
+					i++;
+					if (i > 2) {
+						i = 0;
+					}
+					img.src = mas[i] + ".png";		
+				break;	
+				case buttons[0]: 
+					i--;
+					if (i < 0) {
+						i = 2;
+					}
+					img.src = mas[i] + ".png";		
+			}
+
+		}
+
+
+
+
+
+</script>
+
 </body>
 </html>
